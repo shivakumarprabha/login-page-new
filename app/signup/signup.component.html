@@ -1,0 +1,14 @@
+
+
+<form [formGroup]="rigisterForm" (ngSubmit)="save()">
+    Username <input type="text" formControlName="username">
+    <br>
+    Password <input type="password" formControlName="password">
+    <br>
+
+    Full Name <input type="text" formControlName="fullName">
+<br>
+    <input type="submit" value ="Save" [disabled]="rigisterForm.invalid">
+  
+  
+  </form>
