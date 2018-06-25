@@ -1,0 +1,19 @@
+
+<h3>profile</h3>
+<div *ngIf="profileForm" (ngSubmit)="save()">
+<form [formGroup]="profileForm" (ngSubmit)="save()">
+  {{errorMsg}} <br>
+  
+    Username <input type="text" formControlName="username">
+    <br>
+    Password <input type="password" formControlName="password">
+    <br>
+
+    Full Name <input type="text" formControlName="fullName">
+<br>
+    <input type="submit" value ="Save" [disabled]="profileForm.invalid">
+    <input type="button" value ="cancel" (click)="cancel()">
+  
+  
+  </form>
+</div>
